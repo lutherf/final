@@ -9,21 +9,31 @@
 </head>
 
 <body class="bg-gray-500">
+
+<!-- DIV FOR "SIGN-IN-OR-SIGN-OUT" -->
   <div class="sign-in-or-sign-out">
-    <!-- JavaScript puts stuff here -->
   </div>
  
-  <div class = "header md:flex py-2 px-4 text-l bg-gray-900 text-white font-bold">
-    <h1 class="md:w-1/2 text-left">
+<!-- DIV FOR "HEADER"... CONTAINS THE TITLE, "SEARCHBAR", AND "SIGN-OUT" BUTTON -->
+  <div class = "header md:flex p-4 text-l bg-gray-900 text-white items-center">
+    <h1 class="md:w-1/3 text-left font-bold">
     Wait For It: A Wait Time Estimator
     </h1>
-    <button class="sign-out md:w-1/2 text-right underline">
+
+    <div class="searchbar md:w-1/3 shadow flex">
+      <input class="w-full rounded p-2 text-black" type="text" placeholder="Search... Try &quot;Whole Foods&quot;">
+      <button class="bg-white w-auto justify-end bg-blue-800 text-white p-2">
+        <i class="fas fa-search"></i>
+      </button>
+  </div>
+    <button class="sign-out md:w-1/3 text-right underline">
       Sign Out
     </button>
   </div>
 
+  <!-- DIV FOR "STORES" -->
   <div class="stores p-16 md:flex md:flex-wrap">
-    <!-- JavaScript puts stuff here -->
+
   </div>
 
   <!-- Put the Firebase config here -->
@@ -48,6 +58,7 @@
     firebase.initializeApp(firebaseConfig);
   </script>
   <script src="index.js"></script>
+  <script src="https://kit.fontawesome.com/d0bf6bf32c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

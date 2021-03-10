@@ -2,7 +2,12 @@ firebase.auth().onAuthStateChanged(async function(user) {
   if (user) {
     // Signed in
     console.log('signed in')
-    // Note from Luther - there is a button on the HTML page titled "sign-out" we can use for Firebase sign-out functionality
+    // Sign-out button
+    document.querySelector('.sign-out').addEventListener('click', function(event) {
+    console.log('sign out clicked')
+    firebase.auth().signOut()
+    document.location.href = 'index.html'
+    })
   } else {
     // Signed out
     console.log('signed out')
