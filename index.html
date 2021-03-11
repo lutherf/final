@@ -11,13 +11,12 @@
 <body>
 <!-- DIV FOR "SIGN-IN-OR-SIGN-OUT" -->
   <div class="sign-in-or-sign-out">
+    
   </div>
  
 <!-- DIV FOR "HEADER"... CONTAINS THE TITLE, "SEARCHBAR", AND "SIGN-OUT" BUTTON -->
   <div class = "header md:flex p-4 text-l bg-gray-900 text-white items-center">
-    <p class="md:w-1/3 text-left font-bold">
-    Wait For It: A Wait Time Estimator
-    </p>
+    <p class="md:w-1/3 text-left font-bold">Wait For It: A Wait Time Estimator</p>
 
     <div class="searchbar md:w-1/3 shadow flex">
       <input class="w-full rounded p-2 text-black" type="text" placeholder="Search... Try &quot;Whole Foods&quot;">
@@ -26,28 +25,39 @@
       </button>
   </div>
     <button class="sign-out md:w-1/3 text-right underline">
-      Sign Out
+      <span>Sign Out</span>
     </button>
+  </div>
+
+  <!-- DIV FOR "Instructions" -->
+  <div class="instructions mt-6 p-2">
+  <p class="font-bold"> User Instructions: </p>
+  <p> 1) Search for stores. </p>
+  <p> 2) View wait times below. </p>
+  <p> 3) Click on a business to enter a wait time or view historical wait times. </p>
+  <p> TEMP NOTE: Clicking one of the businesses below should take you to the 
+    <span class = "underline text-blue-500"><a href="store.html">store page.</a></span>  (delete this once JavaScript works)
+</p>
   </div>
 
   <!-- DIV FOR "CURRENT-WAIT-TIMES" Header Box -->
   <div class="current-wait-times bg-black mt-12 ml-2 p-4 text-white font-bold 
   md:w-1/2 text-center">
-  CURRENT WAIT TIMES
+  <p>CURRENT WAIT TIMES</p>
   </div>
 
-  <p class="stores-header bg-purple-700 mt-6 ml-2 p-4 text-white font-bold 
+  <div class="stores-header bg-purple-700 mt-6 ml-2 p-4 text-white font-bold 
   md:w-1/6 text-center">
   <i class="fas fa-store"></i>
-  STORES
+  <span>STORES</span>
   <i class="fas fa-store"></i>
-</p>
-<p class="md:w-5/6">
-</p>
+</div>
+<div class="md:w-5/6">
+</div>
 
 <!-- DIV FOR "STORES"; INSERT STORES HERE -->
 <div class="stores-section my-4 ml-2 md:flex space-x-4">
-  <div class = "stores md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
+  <button class = "stores md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
     <div class="md:flex">
     <div class = "w-1/2">
       <p class="text-xl">CVS</p>
@@ -59,8 +69,8 @@
       <p class="text-sm">1:03 PM</p>
     </div>
   </div>
-  </div>
-  <div class = "stores md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
+  </button>
+  <button class = "stores md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
     <div class="md:flex">
     <div class = "w-1/2">
       <p class="text-xl">Whole Foods</p>
@@ -72,8 +82,8 @@
       <p class="text-sm">12:53 PM</p>
     </div>
   </div>
-  </div>
-  <div class = "stores md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
+  </button>
+  <button class = "stores md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
     <div class="md:flex">
     <div class = "w-1/2">
       <p class="text-xl">Trader Joe's</p>
@@ -82,16 +92,16 @@
     <div class = "w-1/2 text-right">
       <p class="text-sm">Submitted By:</p>
       <p class="text-sm">Alex Ochalek</p>
-      <p class="text-sm">12:35 AM</p>
+      <p class="text-sm">12:35 PM</p>
     </div>
   </div>
-  </div>
+  </button>
 </div>
 
   <p class="restaurants-header bg-blue-700 mt-12 ml-2 p-4 text-white font-bold 
   md:w-1/6 text-center">
   <i class="fas fa-utensils"></i>
-   RESTAURANTS
+  <span>RESTAURANTS</span>
    <i class="fas fa-utensils"></i>
 </p>
 <p class="md:w-5/6">
@@ -99,7 +109,7 @@
 
 <!-- DIV FOR "RESTAURANTS"; INSERT RESTAURANTS HERE -->
 <div class="restaurants-section my-4 ml-2 md:flex space-x-4">
-    <div class = "restaurants md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
+    <button class = "restaurants md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
       <div class="md:flex">
       <div class = "w-1/2">
         <p class="text-xl">Tomate Kitchen</p>
@@ -111,8 +121,8 @@
         <p class="text-sm">12:39 PM</p>
       </div>
     </div>
-    </div>
-    <div class = "restaurants md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
+    </button>
+    <button class = "restaurants md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
       <div class="md:flex">
       <div class = "w-1/2">
         <p class="text-xl">527 Cafe</p>
@@ -124,8 +134,8 @@
         <p class="text-sm">12:16 PM</p>
       </div>
     </div>
-    </div>
-    <div class = "restaurants md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
+    </button>
+    <button class = "restaurants md:w-1/4 p-4 mt-2 border-4 border-blue-700 text-left">
       <div class="md:flex">
       <div class = "w-1/2">
         <p class="text-xl">Sea Ranch</p>
@@ -137,7 +147,7 @@
         <p class="text-sm">11:48 AM</p>
       </div>
     </div>
-    </div>
+    </button>
   </div>
 
   <!-- Put the Firebase config here -->
