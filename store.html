@@ -31,22 +31,13 @@
   </div>
 
   <!-- Link to go back to main page -->
-  <div class="p-2">
+  <div class="mt-2 p-2">
   <span class = "underline text-blue-500"><a href="index.html">Go back to home page.</a></span>
   </div>
 
-  <!-- DIV FOR "Developers Guidance" -->
-  <div class="p-2">
-    <p class="font-bold"> For Developer Guidance (obviously delete later): </p>
-    <p> 1) Get to this page by clicking a business on the previous page. </p>
-    <p> 2) This page should be specific to that business only. </p>
-    <p> 3) There should be a mechanism to submit estimated wait times. </p>
-    <p> 4) There should be a mechanism to vote on past submitted wait times. </p>
-    <p> Question: Can we nix the store photo idea? Seems too hard </p>
-    </div>
-
-    <div class="business-section my-4 mx-2 flex space-x-4">
-    <div class = "business p-4 mt-2 border-4 w-1/3 border-black text-left">
+    <!-- Div for business info, estimate rater, and submit a new time -->
+    <div class="business-section my-4 mx-2 space-x-4">
+    <div class = "business p-4 mt-2 border-2 border-black text-left shadow-md">
       <div class="md:flex">
       <div class = "w-1/2">
         <p class="text-xl">Whole Foods</p>
@@ -58,9 +49,27 @@
         <p class="text-sm">12:53 PM</p>
       </div>
     </div>
+    <div class="mt-10 space-x-4">
+      <p class="text-l font-bold">How accurate was this estimate (on 1-5 scale)?</p>
+      <form class="mt-2 space-x-4">
+        <input type="range" id="rate-wait-time" name="rate-wait-time" min="1" max="5"
+        class="my-2 p-2 w-64 border border-gray-400">
+        <button class="bg-blue-800 hover:bg-blue-500 text-white px-4 py-2 rounded-xl">Submit</button>
+      </form>
     </div>
-    <!-- DIV to rate wait times -->
-    <div class="p-4 mt-2 border-4 w-1/3 border-black text-left">
+    <div class="mt-10 space-x-4">
+      <p class="text-l font-bold">Submit a new wait time! How long was the wait for you? (in minutes)</p>
+      <form class="mt-4 space-x-4">
+        <input type="number" id="submit-wait-time" name="submit-wait-time" 
+        class="my-2 p-2 w-64 border border-gray-400">
+        <button class="bg-blue-800 hover:bg-blue-500 text-white px-4 py-2 rounded-xl">Submit</button>
+      </form>
+    </div>
+    </div>
+    </div>
+
+    <!-- DIV to rate wait times - OLD VERSION!!!
+    <div class="p-4 mt-2 border-2 w-1/3 border-black text-left shadow-md">
       <div class="md:flex">
         <p class="text-l font-bold p-2">How accurate was this wait time?</p>
         <form>
@@ -69,9 +78,10 @@
           <button class="bg-blue-800 hover:bg-blue-500 text-white px-4 py-2 rounded-xl">Submit</button>
         </form>
       </div>
-    </div>
-    <!-- DIV to submit wait times -->
-    <div class="p-4 mt-2 border-4 w-1/3 border-black text-left">
+    </div> -->
+
+    <!-- DIV to submit wait times - OLD VERSION!!!
+    <div class="p-4 mt-2 border-2 w-1/3 border-black text-left shadow-md">
       <div class="md:flex">
         <p class="text-l font-bold p-2">Submit a new wait time! How long was the wait for you? (in minutes)</p>
         <form>
@@ -80,11 +90,99 @@
           <button class="bg-blue-800 hover:bg-blue-500 text-white px-4 py-2 rounded-xl">Submit</button>
         </form>
       </div>
-    </div>
+    </div> -->
+
+  
+    <!-- Table for historical wait times  -->
+    <div class="p-2">
+      <div class="shadow-md my-2 border-2 border-black md:flex">
+        <table class="text-left w-full">
+          <thead>
+            <tr>
+              <th class="p-4 font-bold text-sm text-grey-dark border-b border-grey-light">Wait Time</th>
+              <th class="p-4 font-bold text-sm text-grey-dark border-b border-grey-light">Time</th>
+              <th class="p-4 font-bold text-sm text-grey-dark border-b border-grey-light">Date</th>
+              <th class="p-4 font-bold text-sm text-grey-dark border-b border-grey-light">Submitted By</th>
+              <th class="p-4 font-bold text-sm text-grey-dark border-b border-grey-light">Accuracy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border-b border-grey-light">10 minutes</td>
+              <td class="px-4 py-2 border-b border-grey-light">3:23 PM</td>
+              <td class="px-4 py-2 border-b border-grey-light">3/11/2021</td>
+              <td class="px-4 py-2 border-b border-grey-light">Luther Fan</td>
+              <td class="px-4 py-2 border-b border-grey-light">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border-b border-grey-light">5 minutes</td>
+              <td class="px-4 py-2 border-b border-grey-light">3:03 PM</td>
+              <td class="px-4 py-2 border-b border-grey-light">3/11/2021</td>
+              <td class="px-4 py-2 border-b border-grey-light">Luther Fan</td>
+              <td class="px-4 py-2 border-b border-grey-light">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border-b border-grey-light">15 minutes</td>
+              <td class="px-4 py-2 border-b border-grey-light">2:47 PM</td>
+              <td class="px-4 py-2 border-b border-grey-light">3/11/2021</td>
+              <td class="px-4 py-2 border-b border-grey-light">Luther Fan</td>
+              <td class="px-4 py-2 border-b border-grey-light">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border-b border-grey-light">30 minutes</td>
+              <td class="px-4 py-2 border-b border-grey-light">4:51 PM</td>
+              <td class="px-4 py-2 border-b border-grey-light">3/10/2021</td>
+              <td class="px-4 py-2 border-b border-grey-light">Luther Fan</td>
+              <td class="px-4 py-2 border-b border-grey-light">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border-b border-grey-light">15 minutes</td>
+              <td class="px-4 py-2 border-b border-grey-light">2:51 PM</td>
+              <td class="px-4 py-2 border-b border-grey-light">3/10/2021</td>
+              <td class="px-4 py-2 border-b border-grey-light">Luther Fan</td>
+              <td class="px-4 py-2 border-b border-grey-light">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    
-
+    <!-- DIV FOR "Developers Guidance" -->
+    <div class="p-2">
+      <p class="font-bold"> For Developer Guidance (obviously delete later): </p>
+      <p> 1) Get to this page by clicking a business on the previous page. </p>
+      <p> 2) This page should be specific to that business only. </p>
+      <p> 3) There should be a mechanism to submit estimated wait times. </p>
+      <p> 4) There should be a mechanism to vote on past submitted wait times. </p>
+      <p> Question: Can we nix the store photo idea? Seems too hard </p>
+      </div>  
+  
   <!-- Put the Firebase config here -->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
