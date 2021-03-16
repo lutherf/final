@@ -25,9 +25,9 @@
         <i class="fas fa-search"></i>
       </button>
   </div>
-    <button class="sign-out md:w-1/3 text-right underline">
+    <!-- <button class="sign-out md:w-1/3 text-right underline">
       <span>Sign Out</span>
-    </button>
+    </button> -->
   </div>
 
   <!-- Link to go back to main page -->
@@ -40,31 +40,58 @@
     <div class = "business p-4 mt-2 border-2 border-black text-left shadow-md">
       <div class="md:flex">
       <div class = "w-1/2">
-        <p class="text-xl">Whole Foods</p>
-        <p class="text-xl font-bold pt-1 text-gray-600">10 MINUTES</p>
+        <p class="text-xl font-bold">Welcome to your homepage!</p>
+        <p class="text-xl pt-1 text-gray-600">Please submit new wait time</p>
       </div>
-      <div class = "w-1/2 text-right">
+      <!-- <div class = "w-1/2 text-right">
         <p class="text-sm">Submitted By:</p>
         <p class="text-sm">Linda Zhong</p>
         <p class="text-sm">12:53 PM</p>
+      </div> -->
+      <div class="storewaittime">
+
+        <form class="px-4 py-2 max-w-xs rounded-xl border shadow-lg my-4 mx-10">
+          <!-- Store Name -->
+          <input type="text" id="store" name="store" placeholder="Store Name"
+            class="my-2 p-2 w-72 border border-gray-300 rounded shadow-xl focus:outline-none focus:ring-black-500 focus:border-black-500">
+    
+          <!-- Wait Time -->
+          <input type="text" id="wait-time" name="wait-time" placeholder="Current Wait Time"
+            class="my-2 p-2 w-72 border border-gray-300 rounded shadow-xl focus:outline-none focus:ring-black-500 focus:border-black-500">
+    
+          <!-- Time of Submission -->
+          <input type="text" id="submission-time" name="submission-time" placeholder="Time of Submission"
+            class="my-2 p-2 w-72 border border-gray-300 rounded shadow-xl focus:outline-none focus:ring-black-500 focus:border-black-500">
+          
+          <!-- Date of Submission -->
+          <input type="text" id="date" name="date" placeholder="Date of Submission"
+          class="my-2 p-2 w-72 border border-gray-300 rounded shadow-xl focus:outline-none focus:ring-black-500 focus:border-black-500">
+          
+          <button class="button bg-blue-600 hover:bg-blue-600 text-white mt-2 px-4 py-2 rounded-xl">Submit</button>
+        </form>
       </div>
+
     </div>
-    <div class="mt-10 space-x-4">
-      <p class="text-l font-bold">How accurate was this estimate (on 1-5 scale)?</p>
+
+    <!-- <div class="mt-10 space-x-4">
+      <p class="text-l font-bold">Store Name</p>
       <form class="mt-2 space-x-4">
-        <input type="range" id="rate-wait-time" name="rate-wait-time" min="1" max="5"
-        class="my-2 p-2 w-64 border border-gray-400">
+        <input type="text" id="store" name="store" placeholder="Store Name"
+        class="p-2 w-1/4 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-black-500
+        focus:border-black-500">
         <button class="bg-blue-800 hover:bg-blue-500 text-white px-4 py-2 rounded-xl">Submit</button>
       </form>
     </div>
     <div class="mt-10 space-x-4">
-      <p class="text-l font-bold">Submit a new wait time! How long was the wait for you? (in minutes)</p>
+      <p class="text-l font-bold">How long was the wait for you? (in minutes)</p>
       <form class="mt-4 space-x-4">
         <input type="number" id="submit-wait-time" name="submit-wait-time" 
         class="my-2 p-2 w-64 border border-gray-400">
         <button class="bg-blue-800 hover:bg-blue-500 text-white px-4 py-2 rounded-xl">Submit</button>
       </form>
-    </div>
+    </div> -->
+
+
     </div>
     </div>
 
@@ -94,7 +121,7 @@
 
   
     <!-- Table for historical wait times  -->
-    <div class="p-2">
+    <!-- <div class="p-2">
       <div class="shadow-md my-2 border-2 border-black md:flex">
         <table class="text-left w-full">
           <thead>
@@ -105,8 +132,8 @@
               <th class="p-4 font-bold text-sm text-grey-dark border-b border-grey-light">Submitted By</th>
               <th class="p-4 font-bold text-sm text-grey-dark border-b border-grey-light">Accuracy</th>
             </tr>
-          </thead>
-          <tbody>
+          </thead> -->
+          <!-- <tbody>
             <tr>
               <td class="px-4 py-2 border-b border-grey-light">10 minutes</td>
               <td class="px-4 py-2 border-b border-grey-light">3:23 PM</td>
@@ -168,13 +195,13 @@
                   <i class="fa fa-star"></i>
               </td>
             </tr>
-          </tbody>
-        </table>
+          </tbody> -->
+        <!-- </table>
       </div>
-    </div>
+    </div> -->
 
     <!-- DIV FOR "Developers Guidance" -->
-    <div class="p-2">
+    <!-- <div class="p-2">
       <p class="font-bold"> For Developer Guidance (obviously delete later): </p>
       <p> 1) Get to this page by clicking a business on the previous page. </p>
       <p> 2) This page should be specific to that business only. </p>
@@ -183,23 +210,40 @@
       <p> Question: Can we nix the store photo idea? Seems too hard </p>
       </div>  
   
+  <-- FirebaseUI Auth container -->
+  <div class="sign-in-or-sign-out w-full mb-8"></div>
+
+  <div class="posts w-full"></div>
+
   <!-- Put the Firebase config here -->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script> -->
   <!-- Firebase Auth -->
-  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.js"></script> -->
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+   <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+ 
+   <!-- FirebaseUI Auth -->
+   <!-- https://firebaseopensource.com/projects/firebase/firebaseui-web/ -->
+   <script src="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.js"></script>
 
   <script>
     // Your web app's Firebase configuration
     // This is Luther's config - we can change it
     var firebaseConfig = {
-    apiKey: "AIzaSyAjON7u65z_QKXsSwZBlmBnz2Y6H0zH7Vg",
-    authDomain: "kiei-451-35ff5.firebaseapp.com",
-    projectId: "kiei-451-35ff5",
-    storageBucket: "kiei-451-35ff5.appspot.com",
-    messagingSenderId: "319084547751",
-    appId: "1:319084547751:web:9685c67b81353033d51582"
+      apiKey: "AIzaSyDuWoKXlKq1-X7p6UwxWIYaQUrLYVcRhMA",
+  authDomain: "kiei-451-e1d3f.firebaseapp.com",
+  projectId: "kiei-451-e1d3f",
+  storageBucket: "kiei-451-e1d3f.appspot.com",
+  messagingSenderId: "410970626859",
+  appId: "1:410970626859:web:9799d0040ca24f26c9436e"
   };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
